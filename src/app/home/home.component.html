@@ -1,0 +1,214 @@
+<main>
+
+  <div class="container-fluid w-100 header " id="home">
+
+
+    <h1 class="text-center pf-name text-danger ">Myo Naing Oo </h1>
+    <h4 class="text-center title">Web Developer</h4>
+    <div class="row text-center justify-content-center d-flex ">
+
+      <a href="./assets/myonaingoo.pdf" class="nav-link text-center cv-btn bg-danger "><fa-icon [icon]="faDown" class="mx-2" ></fa-icon> Resume</a>
+    </div>
+  </div>
+
+  <div class="service row d-flex row justify-content-center mt-5" id="service">
+
+    <h4 class="text-center title">Service</h4>
+
+    <div *ngFor="let item of services" class="service-card  mx-md-5 col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+      <div>
+
+        <p>{{ item.name }}</p>
+        <p>Pages {{ item.pages}} </p>
+        <p><fa-icon [icon]="item.getcode ? facheck : fax "
+            [class]="item.getcode ? 'text-success' : 'text-danger' "></fa-icon> get source code </p>
+        <p><fa-icon [icon]="item.sociallink ? facheck : fax "
+            [class]="item.sociallink ? 'text-success' : 'text-danger' "></fa-icon> social media link </p>
+        <p><fa-icon [icon]="item.threed ? facheck : fax "
+            [class]="item.threed ? 'text-success' : 'text-danger' "></fa-icon> 3D Model</p>
+        <p><fa-icon [icon]="item.hosting ? facheck : fax "
+            [class]="item.hosting ? 'text-success' : 'text-danger' "></fa-icon> Hosting</p>
+
+        <p>${{ item.price }}</p>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  <!-- skill start -->
+
+  <div class="skill mx-md-5 " id="skill">
+    <div class="skill-bg py-5">
+
+      <h4 class="text-center title">Skill</h4>
+
+      <div class="skills d-flex row justify-content-center ">
+
+        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+          <strong>Language</strong>
+          <p>C / C++</p>
+          <p>HTML</p>
+          <p>Css</p>
+          <p>Sass / Scss</p>
+          <p>JavaScript</p>
+          <p>TypeScript</p>
+          <p>Php</p>
+          <p>Java</p>
+        </div>
+
+        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+          <strong>FrameWorks</strong>
+          <p>Angular</p>
+          <p>Vue</p>
+          <p>Java EE</p>
+          <p>Spring Boot</p>
+        </div>
+
+
+        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+          <strong>Library</strong>
+          <p>Bootstrap</p>
+          <p>Material</p>
+          <p>Three js</p>
+        </div>
+
+        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+          <strong>DataBase</strong>
+          <p>MySQL</p>
+          <p>PostgreSQL</p>
+        </div>
+
+        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+          <strong>Other</strong>
+          <p>Rest/RestFul API</p>
+          <p>Git</p>
+          <p>GitHub</p>
+          <p>Docker</p>
+          <p>Linux</p>
+          <p>Blender</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- skill end -->
+  <!-- about start -->
+  <div class="about mx-md-5 mx-3 " id="about">
+    <h4 class="title">About</h4>
+    <p>I have been studying programming since 2029.I learned basic c,c plus plus and python programming.
+      Then I leaned web development.
+    </p>
+    <p><strong> Introduction:</strong>
+      Welcome to my portfolio showcasing my expertise as a Java Spring Boot and Angular developer.
+      With a passion for creating robust backend systems and dynamic frontend interfaces,
+      I have successfully delivered numerous projects that blend the power of Spring Boot's
+      backend capabilities with Angular's interactive frontend components.</p>
+
+    <br>
+    <strong>E-commerce Platform (Java Spring Boot, Angular)</strong> <br>
+    <p>
+      Designed and developed a full-stack e-commerce platform.
+      Implemented user authentication, product catalog, shopping cart, and order processing using Spring Boot.
+      Created a responsive and intuitive user interface using Angular, enabling seamless shopping experiences.
+    </p>
+    <br>
+    <br>
+    <strong>Technical Skills:
+
+    </strong>
+    <ul>
+      <li>Java: Proficient in Java programming, leveraging its capabilities for backend development.
+      </li>
+      <li>Spring Boot: Experienced in building RESTful APIs, handling authentication, and integrating with databases
+        using Spring Boot.</li>
+      <li>Angular: Skilled in creating responsive and dynamic user interfaces using Angular, including component-based
+        architecture, services, and routing.</li>
+
+      <li>RESTful APIs: Designing and implementing robust APIs for seamless communication between frontend and backend
+        systems.</li>
+      <li>Database Management: Familiarity with database design and management, including relational databases like
+        MySQL and PostgreSQL.</li>
+      <li>Version Control: Proficient in using Git for source code version control and collaboration.
+      </li>
+      <li>Agile Methodology: Experienced in working within an Agile development environment for efficient project
+        delivery.</li>
+    </ul>
+
+  </div>
+  <!-- about end -->
+  <!-- project start -->
+
+  <div class="mt-2 project-bg mx-md-5 py-5" id="project">
+
+    <h4 class="text-center title">Project</h4>
+
+    <div class="row d-flex pj-con ">
+      <div class="projects col-8 col-md-3 p-4 mt-2  " *ngFor="let project of dynamicPrject">
+        <div class="project ">
+          <img [src]="project.imagePath" class="w-100" alt="">
+          <p class="">{{ project.name }} </p>
+          <a [href]="project.frontpj" class="nav-link bg-dark text-light rounded px-1 w-75 my-1">Frontend source
+            code</a>
+          <a [href]="project.backpj" class="nav-link bg-dark text-light rounded px-1 w-75 my-1">backend source code</a>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+  <!-- project end -->
+
+
+  <!-- contact start -->
+  <div class="contact m-md-5 py-3 mx-1 " id="contact">
+    <h4 class="text-center title">Contact</h4>
+
+    <p class="d-flex mx-md-2 justify-content-center px-3"><fa-icon [icon]="famail" class="mx-2"></fa-icon> Mail :
+      <a href="mailto:myonaingoo623@gmail.com" class="nav-link mx-3">myonaingoo623@gmail.com</a>
+    </p>
+    <p class="d-flex mx-md-2 justify-content-center px-3"><fa-icon [icon]="fatal" class="mx-2"></fa-icon>Phone :<a
+        href="tel:+959254590211" class="nav-link mx-3">+959-254590211</a></p>
+
+    <p class="d-flex mx-md-2 justify-content-center px-3"><fa-icon [icon]="fadot" class="mx-2"></fa-icon>Address :
+      <a href="https://www.google.com/maps/place/16.547280,+94.693328/@16.547344,94.6933796,19z/data=!3m1!1e3!4m4!3m3!8m2!3d16.5472801!4d94.6933276"
+        class="nav-link mx-3">Pataugshwewar Street,Ngaputaw(Northern),<br>Ayeyarwade Region.</a>
+    </p>
+
+    <p class="d-flex mx-md-2 justify-content-center px-3"><fa-icon [icon]="fayoutube" class="mx-2"></fa-icon>YouTube :
+      <a href="https://youtube.com/@MNOIT" class="nav-link mx-3">MNO IT(youtube channel)</a>
+    </p>
+
+    <p class="d-flex mx-md-2 justify-content-center px-3"><fa-icon [icon]="fafacebook" class="mx-2"></fa-icon>FaceBook :
+      <a href="https://www.facebook.com/profile.php?id=100066607411343" class="nav-link mx-3">MyoNaingOo</a>
+    </p>
+
+    <p class="d-flex mx-md-2 justify-content-center px-3"><fa-icon [icon]="faInstagram" class="mx-2"></fa-icon>Instagram
+      :
+      <a href="https://www.instagram.com/myonaingoo623/tagged" class="nav-link mx-3">MyoNaingOo</a>
+    </p>
+
+
+  </div>
+  <!-- contact end -->
+  <a href="#" class="btn btn-danger topbtn"><fa-icon [icon]="faanglaeup"></fa-icon> </a>
+
+
+  <footer class="text-center bg-danger  "> &copy; MNO 2023</footer>
+
+
+</main>
+
+
+<canvas id="bgcan"></canvas>
+
+<div class="">
+  <app-pfcube></app-pfcube>
+</div>
+
+
