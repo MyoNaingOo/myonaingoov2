@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
     },
     {
       name: "Telephone Bills",
-      imagePath: './assets/2D3D.jpg',
+      imagePath: './assets/Teleconbills.jpg',
       frontpj: "https://github.com/MyoNaingOo/telconbill-frontend",
       backpj: "https://github.com/MyoNaingOo/telconbill-backend",
     }
