@@ -10,6 +10,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 export class PfcubeComponent implements OnInit {
 
 
+  boxbody :any;
 
   ngOnInit(): void {
     this.createroom()
@@ -30,10 +31,17 @@ export class PfcubeComponent implements OnInit {
 
     const texture = new THREE.TextureLoader().load('./assets/IMG_20230810_145512.jpg')
     const material = new THREE.MeshBasicMaterial({ map: texture })
-    const box = new THREE.Mesh(
-      new THREE.BoxGeometry(2,2,2),
-      material
-      );
+
+    let body = window.innerWidth
+
+    if(body <= 450){
+      this.boxbody = new THREE.BoxGeometry(1.8,1.8,1.8)
+    }else{
+      this.boxbody = new THREE.BoxGeometry(2,2,2)
+    }
+
+
+    const box = new THREE.Mesh(this.boxbody,material);
 
       scene.add(box);
 
@@ -81,6 +89,13 @@ export class PfcubeComponent implements OnInit {
 
 
   window.addEventListener('scroll',() =>{
+
+    if(body <= 450){
+      this.boxbody = new THREE.BoxGeometry(1.8,1.8,1.8)
+    }else{
+      this.boxbody = new THREE.BoxGeometry(2,2,2)
+    }
+
     let scrolly = window.scrollY
     let y = 250 - scrolly
     if(y >= 0){

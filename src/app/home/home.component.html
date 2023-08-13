@@ -15,7 +15,7 @@
 
     <h4 class="text-center title">Service</h4>
 
-    <div *ngFor="let item of services" class="service-card  mx-md-5 col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+    <div *ngFor="let item of services" class="service-card glass  mx-md-5 col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
       <div>
 
         <p>{{ item.name }}</p>
@@ -48,7 +48,7 @@
 
       <div class="skills d-flex row justify-content-center ">
 
-        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+        <div class="skill-cat col-4 glass col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
           <strong>Language</strong>
           <p>C / C++</p>
           <p>HTML</p>
@@ -60,7 +60,7 @@
           <p>Java</p>
         </div>
 
-        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+        <div class="skill-cat col-4 glass col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
           <strong>FrameWorks</strong>
           <p>Angular</p>
           <p>Vue</p>
@@ -69,20 +69,20 @@
         </div>
 
 
-        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+        <div class="skill-cat col-4 glass col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
           <strong>Library</strong>
           <p>Bootstrap</p>
           <p>Material</p>
           <p>Three js</p>
         </div>
 
-        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+        <div class="skill-cat col-4 glass col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
           <strong>DataBase</strong>
           <p>MySQL</p>
           <p>PostgreSQL</p>
         </div>
 
-        <div class="skill-cat col-4 col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
+        <div class="skill-cat col-4  glass col-md-3 col-lg-2 mx-2 my-1 p-md-3 p-1 ">
           <strong>Other</strong>
           <p>Rest/RestFul API</p>
           <p>Git</p>
@@ -98,9 +98,9 @@
   </div>
   <!-- skill end -->
   <!-- about start -->
-  <div class="about mx-md-5 mx-3 " id="about">
+  <div class="about mx-md-5 mx-3  glass " id="about">
     <h4 class="title">About</h4>
-    <p>I have been studying programming since 2029.I learned basic c,c plus plus and python programming.
+    <p>I have been studying programming since 2019.I learned basic c,c plus plus and python programming.
       Then I leaned web development.
     </p>
     <p><strong> Introduction:</strong>
@@ -148,7 +148,7 @@
     <h4 class="text-center title">Project</h4>
 
     <div class="row d-flex pj-con ">
-      <div class="projects col-8 col-md-3 p-4 mt-2  " *ngFor="let project of dynamicPrject">
+      <div class="projects col-8 col-md-3 p-4 mt-2 glass " *ngFor="let project of dynamicPrject">
         <div class="project ">
           <img [src]="project.imagePath" class="w-100" alt="">
           <p class="">{{ project.name }} </p>
@@ -166,7 +166,7 @@
 
 
   <!-- contact start -->
-  <div class="contact m-md-5 py-3 mx-1 " id="contact">
+  <div class="contact m-md-5 py-3 mx-1  glass" id="contact">
     <h4 class="text-center title">Contact</h4>
 
     <p class="d-flex mx-md-2 justify-content-center px-3"><fa-icon [icon]="famail" class="mx-2"></fa-icon> Mail :
