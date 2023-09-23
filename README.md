@@ -1,2 +1,2 @@
 # Wellcome My Portfolio github
-I am useing Angular and Threejs
+I am used Angular and Threejs
